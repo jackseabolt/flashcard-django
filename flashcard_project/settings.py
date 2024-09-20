@@ -122,3 +122,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# tell django we want to use our custom model for all user authentication
+AUTH_USER_MODEL = 'profiles_api.UserProfile' 
