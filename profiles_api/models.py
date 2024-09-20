@@ -35,14 +35,14 @@ class UserProfileManager(BaseUserManager):
 class UserProfile(AbstractBaseUser, PermissionsMixin): 
     """Database model for users in the system"""
 
-    email =  models.EmailField(max_legnth=255, unique=True)
+    email =  models.EmailField(max_length=255, unique=True)
     name = models.CharField(max_length=266)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=True)
 
     objects = UserProfileManager()
 
-    USERNAME = 'email' # this override the default setting of using username
+    USERNAME_FIELD = 'email' # this override the default setting of using username
     REQUIRED_FIELDS = ['name']
 
     def get_full_name(self): 
