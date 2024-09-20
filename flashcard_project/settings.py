@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework', 
     'rest_framework.authtoken', 
     'flashcard_api',
+    'profiles_api',
 ]
 
 MIDDLEWARE = [
